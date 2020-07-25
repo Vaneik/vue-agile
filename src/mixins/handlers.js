@@ -4,6 +4,7 @@
 const mixin = {
 	methods: {
 		handleMouseDown (e) {
+			if (this.settings.swipeDistance <= 0) return
 			this.isMouseDown = true
 
 			if (e.type.indexOf('touch') !== -1) {
